@@ -19,11 +19,21 @@
                 {% else %}
                     <td>{{item.name}}</td>
                 {% endif %}
+                    <td>
+                        <a href = "/toggle/{{ item.id }}"><button>Toggle</button></a>
+                    </td>
+                    <td>
+                        <a href = "/edit/{{ item.id }}"><button>Edit</button></a>
+                    </td>
+                    <td>
+                        <a href = "/delete/{{ item.id }}"><button>Delete</button></a>
+                    </td>
             </tr>
         {% empty %}
             <tr>You have no tasks to complete!</tr>
         {% endfor %}
     </table>
+    <a href="/add">Add a To Do item</a>
     
 </body>
 </html>
