@@ -8,3 +8,8 @@ class TestModels(TestCase):
         item = Item.objects.create(name='Test to do item')
         self.assertFalse(item.done)
 
+
+def test_item_string_method_returns_name(self):
+    item = Item.objects.create(name='Test to do item')
+    self.assertEqual(str(item), 'Test to do item')
+
